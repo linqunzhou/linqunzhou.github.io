@@ -70,11 +70,11 @@
   
   
   <entry>
-    <title>记一组人工智能的水彩绘画</title>
+    <title>小屋 水彩绘画</title>
     <link href="/2022/04/10/20220410AiPainting/"/>
     <url>/2022/04/10/20220410AiPainting/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>人工智能也学会了根据文字的描述来画出一幅画</p></blockquote><ul><li><p>项目地址 <a href="https://colab.research.google.com/github/alembics/disco-diffusion/blob/main/Disco_Diffusion.ipynb">Disco Diffusion</a></p></li><li><p>prompts</p><figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;0&quot;</span>: [<br>           <span class="hljs-string">&quot;A beautiful painting of a building in a serene lanscape by Yoshitaka Amano, Trending on artstation.&quot;</span>,<br>           <span class="hljs-string">&quot;colorful scheme&quot;</span><br>       ],<br>       <span class="hljs-string">&quot;100&quot;</span>: [<br>           <span class="hljs-string">&quot;This set of prompts start at frame 100&quot;</span>,<br>           <span class="hljs-string">&quot;This prompt has weight five:5&quot;</span><br>       ]<br></code></pre></td></tr></table></figure></li></ul><p><img src="/img/20220410/img_1.png"></p><p><img src="/img/20220410/img_2.png"></p><p><img src="/img/20220410/img_3.png"></p><p><img src="/img/20220410/img_4.png"></p><p><img src="/img/20220410/img_5.png"></p><p><img src="/img/20220410/img_6.png"></p><p><img src="/img/20220410/img_7.png"></p><p><img src="/img/20220410/img_8.png"></p><p><img src="/img/20220410/img_9.png"></p><p><img src="/img/20220410/img_10.png"></p><p><img src="/img/20220410/img_11.png"></p><p><img src="/img/20220410/img_12.png"></p><p><img src="/img/20220410/img_13.png"></p><p><img src="/img/20220410/img_14.png"></p><p><img src="/img/20220410/img_15.png"></p><p><img src="/img/20220410/img_16.png"></p><p><img src="/img/20220410/img_17.png"></p><p><img src="/img/20220410/img_18.png"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>让人工智能根据文字的描述来模仿Artstation画师Yoshitaka Amano画画</p></blockquote><ul><li><p>项目地址 <a href="https://colab.research.google.com/github/alembics/disco-diffusion/blob/main/Disco_Diffusion.ipynb">Disco Diffusion</a></p></li><li><p>prompts</p><figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;0&quot;</span>: [<br>           <span class="hljs-string">&quot;A beautiful painting of a building in a serene lanscape by Yoshitaka Amano, Trending on artstation.&quot;</span>,<br>           <span class="hljs-string">&quot;colorful scheme&quot;</span><br>       ],<br>       <span class="hljs-string">&quot;100&quot;</span>: [<br>           <span class="hljs-string">&quot;This set of prompts start at frame 100&quot;</span>,<br>           <span class="hljs-string">&quot;This prompt has weight five:5&quot;</span><br>       ]<br></code></pre></td></tr></table></figure></li></ul><p><img src="/img/20220410/img_1.png"></p><p><img src="/img/20220410/img_2.png"></p><p><img src="/img/20220410/img_3.png"></p><p><img src="/img/20220410/img_4.png"></p><p><img src="/img/20220410/img_5.png"></p><p><img src="/img/20220410/img_6.png"></p><p><img src="/img/20220410/img_7.png"></p><p><img src="/img/20220410/img_8.png"></p><p><img src="/img/20220410/img_9.png"></p><p><img src="/img/20220410/img_10.png"></p><p><img src="/img/20220410/img_11.png"></p><p><img src="/img/20220410/img_12.png"></p><p><img src="/img/20220410/img_13.png"></p><p><img src="/img/20220410/img_14.png"></p><p><img src="/img/20220410/img_15.png"></p><p><img src="/img/20220410/img_16.png"></p><p><img src="/img/20220410/img_17.png"></p><p><img src="/img/20220410/img_18.png"></p>]]></content>
     
     
     <categories>
@@ -92,15 +92,28 @@
     
     <tags>
       
-      <tag>计算机</tag>
-      
-      <tag>人工智能</tag>
-      
       <tag>绘画</tag>
       
       <tag>艺术</tag>
       
+      <tag>计算机</tag>
+      
+      <tag>人工智能</tag>
+      
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/04/10/20160604Dynasty/"/>
+    <url>/2022/04/10/20160604Dynasty/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
     
   </entry>
   
@@ -287,7 +300,7 @@
   
   
   <entry>
-    <title>安卓手机拍摄星河教程</title>
+    <title>安卓手机拍下星空</title>
     <link href="/2020/09/27/20200927AndroidStars/"/>
     <url>/2020/09/27/20200927AndroidStars/</url>
     
@@ -298,7 +311,7 @@
       
       <category>摄影</category>
       
-      <category>星河</category>
+      <category>星空</category>
       
     </categories>
     
@@ -307,7 +320,7 @@
       
       <tag>摄影</tag>
       
-      <tag>星河</tag>
+      <tag>星空</tag>
       
     </tags>
     
@@ -424,6 +437,41 @@
       <tag>摄影</tag>
       
       <tag>汉服</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>十二星座 彩铅</title>
+    <link href="/2014/04/08/20140408ColoredPencil/"/>
+    <url>/2014/04/08/20140408ColoredPencil/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>小时候学绘画时的彩铅</p></blockquote><blockquote><p>那个时候简单的好傻 却又空前绝后快乐啊</p></blockquote><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"></p><p><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"><br><img src="/img/20140408/img_1.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>绘画</category>
+      
+      <category>彩铅</category>
+      
+      <category>艺术</category>
+      
+      <category>绘画</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>彩铅</tag>
+      
+      <tag>绘画</tag>
+      
+      <tag>艺术</tag>
       
     </tags>
     
