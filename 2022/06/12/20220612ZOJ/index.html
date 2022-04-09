@@ -16,18 +16,20 @@
   <meta name="author" content="linqun">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="1001 A + B Problem123456789#include &lt;stdio.h&gt;int main()&amp;#123;    int a,b;    while(scanf(&quot;%d %d&quot;,&amp;a,&amp;b) !&#x3D; EOF)&amp;#123;        printf(&quot;%d\n&quot;,a+b);    &amp;#125;    return 0">
+<meta property="og:type" content="article">
 <meta property="og:title" content="浙大ZOJ Practice C语言实现 -- 持续更新中">
-<meta property="og:url" content="http://example.com/2022/04/11/20220612ZOJ/index.html">
+<meta property="og:url" content="http://example.com/2022/06/12/20220612ZOJ/index.html">
 <meta property="og:site_name" content="linqun&#39;s blog">
+<meta property="og:description" content="1001 A + B Problem123456789#include &lt;stdio.h&gt;int main()&amp;#123;    int a,b;    while(scanf(&quot;%d %d&quot;,&amp;a,&amp;b) !&#x3D; EOF)&amp;#123;        printf(&quot;%d\n&quot;,a+b);    &amp;#125;    return 0">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/20220612/img_1.png">
-<meta property="article:published_time" content="2022-04-11T02:10:56.000Z">
-<meta property="article:modified_time" content="2022-04-09T17:54:04.960Z">
+<meta property="article:published_time" content="2022-06-12T02:10:56.000Z">
+<meta property="article:modified_time" content="2022-04-09T23:49:50.271Z">
 <meta property="article:author" content="linqun">
 <meta property="article:tag" content="计算机">
-<meta property="article:tag" content="编程">
 <meta property="article:tag" content="C语言">
+<meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/20220612/img_1.png">
   
@@ -188,8 +190,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-11 10:10" pubdate>
-        April 11, 2022 am
+      <time datetime="2022-06-12 10:10" pubdate>
+        June 12, 2022 am
       </time>
     </span>
   
@@ -199,7 +201,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      1.4k 字
     </span>
   
 
@@ -208,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      12 分钟
     </span>
   
 
@@ -240,7 +242,15 @@
             <h1 style="display: none">浙大ZOJ Practice C语言实现 -- 持续更新中</h1>
             
             <div class="markdown-body">
-              
+              <h1 id="1001-A-B-Problem"><a href="#1001-A-B-Problem" class="headerlink" title="1001 A + B Problem"></a>1001 A + B Problem</h1><figure class="highlight c"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-type">int</span> a,b;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d&quot;</span>,&amp;a,&amp;b) != EOF)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,a+b);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>本题需要注意的是输入和输出格式，输入要的是一对数字中间用空格隔开，输出要求占一行</p>
+</blockquote>
+<h1 id="1002-Fire-Net"><a href="#1002-Fire-Net" class="headerlink" title="1002 Fire Net"></a>1002 Fire Net</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">static</span> <span class="hljs-type">char</span> city[<span class="hljs-number">16</span>];<br><br><span class="hljs-type">static</span> <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> amount, n;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> i;<br>	<span class="hljs-type">void</span> <span class="hljs-title function_">dfs</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> index, <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> count)</span>;<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%u&quot;</span>, &amp;n);<br>	<span class="hljs-keyword">while</span>(n != <span class="hljs-number">0</span>)&#123;<br>        amount = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; n; i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, &amp;city[i*n]);<br>		dfs(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%u\n&quot;</span>,amount);<br>		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%u&quot;</span>, &amp;n);<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">dfs</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> index, <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> count)</span>&#123;<br>    <span class="hljs-type">int</span> <span class="hljs-title function_">noBlockhouse</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> index)</span>;<br><br>    <span class="hljs-keyword">if</span>(index  == n * n)&#123;<br>        <span class="hljs-keyword">if</span>(count &gt; amount) amount = count;<br>        count = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;;<br><br>    <span class="hljs-keyword">if</span>(city[index] == <span class="hljs-string">&#x27;.&#x27;</span> &amp;&amp; noBlockhouse(index))&#123;<br><br>        city[index] = <span class="hljs-string">&#x27;b&#x27;</span>;<br>        dfs(index + <span class="hljs-number">1</span>, count + <span class="hljs-number">1</span>);<br><br>        city[index] = <span class="hljs-string">&#x27;.&#x27;</span>;<br>    &#125;<br>        dfs(index + <span class="hljs-number">1</span>, count);<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">noBlockhouse</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> index)</span>&#123;<br>    <br>    <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> row = index / n;<br>    <span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> column = index % n;<br><br>    <span class="hljs-keyword">while</span>(index &gt;= row*n &amp;&amp; city[index] != <span class="hljs-string">&#x27;X&#x27;</span> )&#123;<br>        <span class="hljs-keyword">if</span>(city[index] == <span class="hljs-string">&#x27;b&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;<br>        index --;<br>    &#125;<br>    <span class="hljs-keyword">while</span>(row &gt;= <span class="hljs-number">0</span> &amp;&amp; city[row*n+column] != <span class="hljs-string">&#x27;X&#x27;</span>)&#123;<br>    	<span class="hljs-keyword">if</span>(city[row*n+column] == <span class="hljs-string">&#x27;b&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    	<span class="hljs-keyword">if</span>(row == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;<br>    	row --;<br>	&#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>简单的DFS问题</p>
+</blockquote>
+
             </div>
             <hr>
             <div>
@@ -263,9 +273,9 @@
                     
                       <a class="hover-with-bg" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>
-                    
                       <a class="hover-with-bg" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>
                     
                   </div>
                 
@@ -282,18 +292,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/11/20220611/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">算法导论中文第三版 全书C语言实现 --持续更新中</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/10/20220410AiPainting/">
-                        <span class="hidden-mobile">小屋 水彩绘画</span>
+                      <a href="/2022/06/11/20220611/">
+                        <span class="hidden-mobile">算法导论中文第三版 全书C语言实现 --持续更新中</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
