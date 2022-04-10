@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="linqun">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Markdown 简单入门MarkDown的主要目标是易于编写和阅读。 它使用“纯文本”格式，并且可以转换为HTML。 我在使用Markdown时遇到的最常见用例是自述文件，例如用于Github仓库。 Markdown也可以用来创建电子邮件。 与HTML相比，Markdown的读写更加简单。 普通人通常可以理解和使用，并且比HTML更快地学习和编写使用。 The main goal of Mark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown in VS Code">
+<meta property="og:url" content="http://example.com/2020/09/09/20200909Markdown/index.html">
+<meta property="og:site_name" content="linqun&#39;s blog">
+<meta property="og:description" content="Markdown 简单入门MarkDown的主要目标是易于编写和阅读。 它使用“纯文本”格式，并且可以转换为HTML。 我在使用Markdown时遇到的最常见用例是自述文件，例如用于Github仓库。 Markdown也可以用来创建电子邮件。 与HTML相比，Markdown的读写更加简单。 普通人通常可以理解和使用，并且比HTML更快地学习和编写使用。 The main goal of Mark">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/20200909/2.jpg">
+<meta property="article:published_time" content="2020-09-08T17:54:56.000Z">
+<meta property="article:modified_time" content="2022-04-09T17:24:33.933Z">
+<meta property="article:author" content="linqun">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="写作">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/20200909/2.jpg">
+  
+  
+  <title>Markdown in VS Code - linqun&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Linqun</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/20200909/2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Markdown in VS Code">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-09-09 01:54" pubdate>
+        September 9, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      7.5k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      63 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Markdown in VS Code</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Markdown-简单入门"><a href="#Markdown-简单入门" class="headerlink" title="Markdown 简单入门"></a>Markdown 简单入门</h1><p>MarkDown的主要目标是易于编写和阅读。 它使用“纯文本”格式，并且可以转换为HTML。 我在使用Markdown时遇到的最常见用例是自述文件，例如用于Github仓库。 Markdown也可以用来创建电子邮件。</p>
+<p>与HTML相比，Markdown的读写更加简单。 普通人通常可以理解和使用，并且比HTML更快地学习和编写使用。</p>
+<p>The main goal of MarkDown is to be easily written and easily read.  It uses “plain text” formatting and can be converted to HTML.  The most common use case I’ve come across to use Markdown is for ReadMe files, used, for example, for Github repos.  Markdown can also be used to create email.</p>
+<p>Markdown, in comparison to HTML, is much simpler to read and write.  The average person can typically understand markdown and would be able to learn and write it much quicker than HTML.</p>
+<p>Specifically, Visual Studio Code uses the <a target="_blank" rel="noopener" href="http://commonmark.org/">CommonMark</a> Markdown specification.</p>
+<hr>
+<h2 id="栏目-Sections"><a href="#栏目-Sections" class="headerlink" title="栏目 Sections"></a>栏目 Sections</h2><figure class="highlight markdown"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> [<span class="hljs-string">Markdown 简单入门</span>](<span class="hljs-link">#markdown-简单入门</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">栏目 Sections</span>](<span class="hljs-link">#栏目-sections</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">标题 Headers</span>](<span class="hljs-link">#标题-headers</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">引用 Quotes</span>](<span class="hljs-link">#引用-quotes</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">强调 Emphasis</span>](<span class="hljs-link">#强调-emphasis</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">水平线 Horizontal Rule</span>](<span class="hljs-link">#水平线-horizontal-rule</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">清单 Lists</span>](<span class="hljs-link">#清单-lists</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">链接 Links</span>](<span class="hljs-link">#链接-links</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">图片 Images</span>](<span class="hljs-link">#图片-images</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">代码 Code</span>](<span class="hljs-link">#代码-code</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">表格 Tables</span>](<span class="hljs-link">#表格-tables</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">自定义HTML Custom HTML</span>](<span class="hljs-link">#自定义html-custom-html</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">自定义CSS Custom CSS</span>](<span class="hljs-link">#自定义css-custom-css</span>)<br><span class="hljs-bullet">  -</span> [<span class="hljs-string">Additional Resources</span>](<span class="hljs-link">#additional-resources</span>)<br></code></pre></td></tr></table></figure>
+<ul>
+<li><a href="#markdown-%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8">Markdown 简单入门</a><ul>
+<li><a href="#%E6%A0%8F%E7%9B%AE-sections">栏目 Sections</a></li>
+<li><a href="#%E6%A0%87%E9%A2%98-headers">标题 Headers</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8-quotes">引用 Quotes</a></li>
+<li><a href="#%E5%BC%BA%E8%B0%83-emphasis">强调 Emphasis</a></li>
+<li><a href="#%E6%B0%B4%E5%B9%B3%E7%BA%BF-horizontal-rule">水平线 Horizontal Rule</a></li>
+<li><a href="#%E6%B8%85%E5%8D%95-lists">清单 Lists</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5-links">链接 Links</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87-images">图片 Images</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81-code">代码 Code</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC-tables">表格 Tables</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89html-custom-html">自定义HTML Custom HTML</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89css-custom-css">自定义CSS Custom CSS</a></li>
+<li><a href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="标题-Headers"><a href="#标题-Headers" class="headerlink" title="标题 Headers"></a>标题 Headers</h2><p>Headers are defined by the ‘#’symbol.  One ‘#’ for H1, two for H2, etc.</p>
+<!-- 
+    Example
+
+    # H1 Header 
+-->
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Example<br><span class="hljs-section"># H1 Header</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>TODO</strong>. Create an H1 </p>
+</blockquote>
+<blockquote>
+<p><strong>TODO</strong>. Create an H2 </p>
+</blockquote>
+<blockquote>
+<p><strong>TODO</strong>. Create an H3 </p>
+</blockquote>
+<blockquote>
+<p><strong>TODO</strong>. Create an H4 </p>
+</blockquote>
+<hr>
+<h2 id="引用-Quotes"><a href="#引用-Quotes" class="headerlink" title="引用 Quotes"></a>引用 Quotes</h2><p>Quotes are defined by the  ‘&gt;’ symbol </p>
+<!--
+    Example
+
+    > This is an example quote
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!--<br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    &gt; This is an example quote</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>TODO</strong>. Create a quote</p>
+</blockquote>
+<p>You can combine a header with a quote.</p>
+<!-- 
+    Example
+
+    > # H1 Quote
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    &gt; # H1 Quote</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>TODO</strong>. Create an H2 Quote </p>
+</blockquote>
+<hr>
+<h2 id="强调-Emphasis"><a href="#强调-Emphasis" class="headerlink" title="强调 Emphasis"></a>强调 Emphasis</h2><p>Add emphasis with asterisks ‘*’ and underscores ‘_’<br>Two before and after (no spaces) a section of texts makes it bold </p>
+<!--
+    Example
+
+    **Bold Text with asterisks**
+    __Bold Text with underscores__
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!--<br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    **Bold Text with asterisks**</span><br><span class="hljs-code">    __Bold Text with underscores__</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p><strong>Bold Text with asterisks</strong></p>
+<p><strong>Bold Text with underscores</strong></p>
+<p>One before and after (no spaces) a section of texts makes it bold </p>
+<!-- 
+    Example
+
+    *Italicized Text with asterisks*
+    _Italicized Text with underscores_
+--> 
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    *Italicized Text with asterisks*</span><br><span class="hljs-code">    _Italicized Text with underscores_</span><br><span class="hljs-code">--&gt; </span><br></code></pre></td></tr></table></figure>
+<p> <em>Italicized Text with asterisks</em></p>
+<p><em>Italicized Text with underscores</em></p>
+<p>You can also put Bold and Italicized text inline by surrounding a group of words.</p>
+<!-- 
+    Example
+
+    This text is **bold** and this text is *italicized* 
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    This text is **bold** and this text is *italicized* </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p>This text is <strong>bold</strong> and this text is <em>italicized</em> </p>
+<blockquote>
+<p><strong>TODO</strong>. Create a bold sentence, an italicized sentence, and a sentence with both bold and italicized text inline</p>
+</blockquote>
+<hr>
+<h2 id="水平线-Horizontal-Rule"><a href="#水平线-Horizontal-Rule" class="headerlink" title="水平线 Horizontal Rule"></a>水平线 Horizontal Rule</h2><p>A horizontal rule gives a visible line break.  You can create one by putting three or more hypens, asterisks, or underscores (-, *, _).</p>
+<p>For what it’s worth, I prefer dashes…</p>
+<!-- 
+    Example
+
+    ---
+    ***
+    ___
+-->
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    ---</span><br><span class="hljs-code">    ***</span><br><span class="hljs-code">    ___</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>TODO</strong> Create a horizontal rule</p>
+</blockquote>
+<hr>
+<h2 id="清单-Lists"><a href="#清单-Lists" class="headerlink" title="清单 Lists"></a>清单 Lists</h2><p>Create unordered lists using ‘-‘, ‘*’, ‘+, </p>
+<!-- 
+    Example with each 
+
+    - item
+    * item
+    + item
+    - sdfsd
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example with each </span><br><span class="hljs-code"></span><br><span class="hljs-bullet">    -</span> item<br><span class="hljs-bullet">    *</span> item<br><span class="hljs-bullet">    +</span> item<br><span class="hljs-bullet">    -</span> sdfsd<br>--&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>item</li>
+</ul>
+<ul>
+<li>item</li>
+</ul>
+<ul>
+<li>item</li>
+</ul>
+<ul>
+<li>sdfsd</li>
+</ul>
+<p>You can create sublists by indenting</p>
+<!-- 
+    Example
+
+    - item
+    - subitem
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">    -</span> item<br><span class="hljs-bullet">    -</span> subitem<br>--&gt;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>item</li>
+<li>subitem</li>
+</ul>
+<p>Create ordered lists using a number prefix</p>
+<!-- 
+    Example
+
+    1. item 1
+    2. item 2
+    3. item 3 
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">    1.</span> item 1<br><span class="hljs-bullet">    2.</span> item 2<br><span class="hljs-bullet">    3.</span> item 3 <br>--&gt;<br></code></pre></td></tr></table></figure>
+<ol>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ol>
+<blockquote>
+<p><strong>TODO</strong> Create an unordered list of your 5 favorite TV Shows </p>
+</blockquote>
+<blockquote>
+<p><strong>TODO</strong> Create an ordered list of your top 5 Movies </p>
+</blockquote>
+<hr>
+<h2 id="链接-Links"><a href="#链接-Links" class="headerlink" title="链接 Links"></a>链接 Links</h2><p>Create a link by surrounding it with angle bracket</p>
+<!-- 
+    Example
+
+    <http://www.jamesqquick.com> 
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    &lt;http://www.linqun.top&gt;</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://www.linqun.top/">http://www.linqun.top</a> </p>
+<p>Create a link with text by surrounding text with brackets, [], and link immediately following with parenthesis ()</p>
+<!-- 
+    Example
+
+    [James Q Quick](http://www.jamesqquick.com) 
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    [linqun](http://www.linqun.top) </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p> <a target="_blank" rel="noopener" href="http://www.linqun.top/">linqun</a> </p>
+<blockquote>
+<p><strong>TODO</strong> Create a link to your website, twitter, or github. with no text</p>
+</blockquote>
+<blockquote>
+<p><strong>TODO</strong> Create a link with text to your website, twitter, or github</p>
+</blockquote>
+<p>What if you needed to reuse a link several times?  Well, you could copy and paste that link each time.  That means, if you need to update the link, you will have to do it each time its used.  There’s a better way!</p>
+<p>Create reference style links by defining your link with the a ‘key’ inside of brackets, colon, space, and the link</p>
+<!-- 
+    Example
+
+    [1]: http://jamesqquick.com/ 
+-->
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    [1]: http://linqun.top/ </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p>Then use the reference style link by using your text inside of brackets followed by the link ‘key’ inside of bracket.</p>
+<!-- 
+    Example
+
+    [My Website][1] 
+-->
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    [My Website][1] </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://linqun.top/">My Website</a> </p>
+<blockquote>
+<p><strong>TODO</strong> Create a reference link to your website and reference it three times</p>
+</blockquote>
+<p>You can also link to other locations on your markdown page.  Remember, your MarkDown will get converted to HTML, so you can, in theory, use a anchor tag to link to an element with a specific ID.  You can find an example of this in the list of sections at the top of this document.</p>
+<p>When we create a header tag for example, it implicitly creates an id property.</p>
+<p>Ex ‘# Header’ becomes <code>&lt;h1 id=&quot;header&quot;&gt;Header&lt;/h1&gt;</code></p>
+<p>Names will be converted to ids by replacing spaces with hyphens and uppercase letters with lowercase letters (think css naming convention).</p>
+<p>Ex ‘Header Info’ becomes header-info</p>
+<blockquote>
+<p><strong>TODO</strong> Create a link to another part of your page.</p>
+</blockquote>
+<hr>
+<h2 id="图片-Images"><a href="#图片-Images" class="headerlink" title="图片 Images"></a>图片 Images</h2><p>Defining an image is similar to defining a link, except you prefix it with ‘!’</p>
+<!-- 
+    Example
+
+    ![linqun](/img/screenshot.jpg) 
+-->
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    ![linqun](/img/1.png) </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p><img src="/img/20200909/1.png" srcset="/img/loading.gif" lazyload alt="1"></p>
+<p>Just like links, you can define images by reference in the same format.</p>
+<p>Define the reference</p>
+<!-- 
+    Example
+
+    [profile]: /img/screenshot.jpg 
+-->
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    [profile]: /img/screenshot.jpg </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+<p>Use the reference</p>
+<!-- 
+    Example
+
+    ![linqun][profile] 
+-->
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    ![linqun][profile] </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>TODO</strong> Create a reference link to your profile picture and then reference it.</p>
+</blockquote>
+<hr>
+<h2 id="代码-Code"><a href="#代码-Code" class="headerlink" title="代码 Code"></a>代码 Code</h2><p>You can do inline code with <code>backticks</code> (&#96;&#96;)</p>
+<blockquote>
+<p><strong>TODO</strong> Display a line of text with inline code</p>
+</blockquote>
+<p>You can do blocks of code by surroung it with 3 backticks (``` ```)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">     Example</span><br><span class="hljs-code">    \```</span><br><span class="hljs-code">        var num = 0;</span><br><span class="hljs-code">        var num2 = 0;</span><br><span class="hljs-code">    \```</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs abnf">var num <span class="hljs-operator">=</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span><br>var num2 <span class="hljs-operator">=</span> <span class="hljs-number">0</span><span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>TODO</strong> Display a block of code from your favorite language</p>
+</blockquote>
+<p>The above does not give language specific highlighting.  You can specify the programming language immediately following the opening 3 backticks.  You Should see a difference in highliting!</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example Javascript</span><br><span class="hljs-code"></span><br><span class="hljs-code">    \```javascript</span><br><span class="hljs-code">        var num = 0;</span><br><span class="hljs-code">        var num2 = 0;</span><br><span class="hljs-code">    \```</span><br><span class="hljs-code"></span><br><span class="hljs-code">    Example HTML</span><br><span class="hljs-code"></span><br><span class="hljs-code">    \```html </span><br><span class="hljs-code">        &lt;div&gt;</span><br><span class="hljs-code">            &lt;p&gt;This is an html example&lt;/p&gt;</span><br><span class="hljs-code">        &lt;/div&gt;</span><br><span class="hljs-code">    \```</span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">var</span> num2 = <span class="hljs-number">0</span>;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is an html example<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>TODO</strong> Display a block of code from your favorite language while specifying the language</p>
+</blockquote>
+<hr>
+<h2 id="表格-Tables"><a href="#表格-Tables" class="headerlink" title="表格 Tables"></a>表格 Tables</h2><p>Tables are useful for displaying rows and columns of data.  Column headers can be defined in between pipes (|).  Headers are separated from table content with a row of dashes (-) (still separated by pipes), and there must be at least 3 dashes between each header.  The row data follows beneath (still separated by pipes).</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    | Header 1    | Header 2    | Header 3    |</span><br><span class="hljs-code">    | ----------- | ----------- | ----------- |</span><br><span class="hljs-code">    | Row 1 Col 1 | Row 1 Col 2 | Row 1 Col 3 | </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+<th>Header 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Row 1 Col 1</td>
+<td>Row 1 Col 2</td>
+<td>Row 1 Col 3</td>
+</tr>
+</tbody></table>
+<p>The column definitions and row definitions do not have to have the exact same width sizes, but it would be much more readable.  Notice the output of the following two tables are the same, but the second (the raw markdown) is much more readable.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    | Header 1 | Header 2 |</span><br><span class="hljs-code">    | ----| ---|</span><br><span class="hljs-code">    |Loooooooooooooong item 1 | looooooooooong item 2 | </span><br><span class="hljs-code"></span><br><span class="hljs-code">    Example</span><br><span class="hljs-code"></span><br><span class="hljs-code">    | Header 1                | Header 2              |</span><br><span class="hljs-code">    | ----------------------- | --------------------- |</span><br><span class="hljs-code">    |Loooooooooooooong item 1 | looooooooooong item 2 | </span><br><span class="hljs-code">--&gt;   </span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Loooooooooooooong item 1</td>
+<td>looooooooooong item 2</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Loooooooooooooong item 1</td>
+<td>looooooooooong item 2</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>TODO</strong> Create a table with three columns and two rows</p>
+</blockquote>
+<p>You can also align (Center, left, right) the text in a column by using colons (:) in the line breaks between headers and rows.  No colon means the default <strong>left alignment</strong>.  Colons on each side signifies <strong>center alignment</strong>.  And a trailing colon means <strong>right alignment</strong>.</p>
+<blockquote>
+<p><strong>TODO</strong> Create a table with three columns, one aligned left, one aligned center, and one aligned right</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&lt;!-- <br><span class="hljs-code">    Example</span><br><span class="hljs-code">    </span><br><span class="hljs-code">    | Header | Header 1 | Header 2  |</span><br><span class="hljs-code">    | ------ | :------: | --------: |</span><br><span class="hljs-code">    | Aligned Left | Aligned Center | Aligned Right | </span><br><span class="hljs-code">--&gt;</span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th align="center">Header 1</th>
+<th align="right">Header 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Aligned Left</td>
+<td align="center">Aligned Center</td>
+<td align="right">Aligned Right</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="自定义HTML-Custom-HTML"><a href="#自定义HTML-Custom-HTML" class="headerlink" title="自定义HTML Custom HTML"></a>自定义HTML Custom HTML</h2><p>Since MarkDown gets automatically converted to HTML, you can add raw HTML directly to your MarkDown.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sample HTML Div<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Creates this </p>
+<p>Sample HTML Div</p>
+
+<blockquote>
+<p><strong>TODO</strong> If you are comfortable with HTML, add some raw HTML.</p>
+</blockquote>
+<hr>
+<h2 id="自定义CSS-Custom-CSS"><a href="#自定义CSS-Custom-CSS" class="headerlink" title="自定义CSS Custom CSS"></a>自定义CSS Custom CSS</h2><p>You can also add custom CSS to your MarkDown to add additional styling to your document. You can also include CSS by including a style tag.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"></span><br><span class="language-css">    <span class="hljs-selector-tag">body</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">color</span>:red;</span><br><span class="language-css">    &#125;</span><br><span class="language-css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>TODO</strong> If you are comfortable with CSS, give your page some style.</p>
+</blockquote>
+<hr>
+<h2 id="Additional-Resources"><a href="#Additional-Resources" class="headerlink" title="Additional Resources"></a>Additional Resources</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images">Markdown Cheat Sheet - Adam P on Github</a></li>
+<li><a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/syntax">Daring Fireball Markdown Syntax</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/languages/markdown">MarkDown in Visual Studio Code</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%86%99%E4%BD%9C/">写作</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Markdown/">Markdown</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%86%99%E4%BD%9C/">写作</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/09/10/20200910PyTest/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Pytest框架进行软件测试</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/09/06/20200906Hanfu/">
+                        <span class="hidden-mobile">风雪添做酒</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
