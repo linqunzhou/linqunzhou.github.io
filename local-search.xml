@@ -15,9 +15,9 @@
       
       <category>计算机</category>
       
-      <category>C语言</category>
-      
       <category>ZOJ</category>
+      
+      <category>C语言</category>
       
     </categories>
     
@@ -345,7 +345,7 @@
   
   
   <entry>
-    <title>Pytest框架进行软件测试</title>
+    <title>Pytest 软件测试</title>
     <link href="/2020/09/10/20200910PyTest/"/>
     <url>/2020/09/10/20200910PyTest/</url>
     
