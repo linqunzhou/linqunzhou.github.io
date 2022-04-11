@@ -15,9 +15,9 @@
       
       <category>计算机</category>
       
-      <category>ZOJ</category>
-      
       <category>C语言</category>
+      
+      <category>ZOJ</category>
       
     </categories>
     
@@ -81,11 +81,11 @@
       
       <category>计算机</category>
       
+      <category>人工智能</category>
+      
       <category>艺术</category>
       
       <category>绘画</category>
-      
-      <category>人工智能</category>
       
     </categories>
     
@@ -142,7 +142,7 @@
   
   
   <entry>
-    <title>Elon Musk 旅途，贩卖火箭的人</title>
+    <title>旅途，贩卖火箭的人</title>
     <link href="/2021/03/19/20210319ElonMusk/"/>
     <url>/2021/03/19/20210319ElonMusk/</url>
     
@@ -231,7 +231,7 @@
   
   
   <entry>
-    <title>虚幻四搭建一个街道游戏场景</title>
+    <title>虚幻四 搭建场景</title>
     <link href="/2020/10/03/20201003Vanue/"/>
     <url>/2020/10/03/20201003Vanue/</url>
     
@@ -287,7 +287,7 @@
   
   
   <entry>
-    <title>安卓手机拍下星空</title>
+    <title>安卓 拍下星空</title>
     <link href="/2020/09/27/20200927AndroidStars/"/>
     <url>/2020/09/27/20200927AndroidStars/</url>
     
@@ -316,7 +316,7 @@
   
   
   <entry>
-    <title>使用hexo搭建自己的博客</title>
+    <title>hexo + GitHub.io搭建博客</title>
     <link href="/2020/09/24/20200924Hexo/"/>
     <url>/2020/09/24/20200924Hexo/</url>
     
